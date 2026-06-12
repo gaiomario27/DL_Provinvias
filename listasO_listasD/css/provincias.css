@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(
+        135deg,
+        #111 0%,
+        #1f1f1f 50%,
+        #2b0000 100%
+    );
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.mapa-topo{
+    width:min(95%,700px);
+    height:auto;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    display:block;
+    margin:auto;
+}
+
+h1{
+    margin-top:25px;
+    font-size:2.5rem;
+    color:#ffd700;
+    text-shadow:2px 2px 10px rgba(0,0,0,.5);
+}
+
+.descricao{
+    max-width:800px;
+    margin:20px auto;
+    padding:15px 20px;
+
+    background:rgba(255,255,255,.08);
+    border-left:5px solid #ffd700;
+    border-radius:10px;
+
+    font-size:1.1rem;
+    line-height:1.7;
+}
+
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.lista-provincias{
+    font-size:1.1rem;
+}
+
+.lista-provincias{
+    list-style-type: decimal;
+    padding-left: 40px;
+}
+
+.lista-provincias > li::marker{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.lista-provincias > li{
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(8px);
+
+    margin-bottom:20px;
+    padding:20px;
+
+    border-radius:15px;
+
+    border-left:6px solid #ffd700;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.lista-provincias > li:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+
+.lista-provincias a{
+    color:#ffcc00;
+    text-decoration:none;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.lista-provincias a:hover{
+    color:#ff4d4d;
+}
+
+.lista-provincias ul{
+    margin-top:10px;
+    margin-left:25px;
+}
+
+.lista-provincias ul li{
+    color:#e5e5e5;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:1.8rem;
+    }
+
+    .descricao{
+        font-size:1rem;
+    }
+
+    .lista-provincias a{
+        font-size:1.1rem;
+    }
+
+}
+
+.lista-provincias > li:nth-child(3n+1) > a{
+    color:#d62828; /* vermelho */
+}
+
+.lista-provincias > li:nth-child(3n+2) > a{
+    color:#ffd700; /* amarelo */
+}
+
+.lista-provincias > li:nth-child(3n) > a{
+    color:#ffffff; /* texto claro para destacar o preto */
+    text-shadow:
+        1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+}
+
+
+.lista-provincias > li:nth-child(3n+1){
+    border-left-color:#d62828;
+}
+
+.lista-provincias > li:nth-child(3n+2){
+    border-left-color:#ffd700;
+}
+
+.lista-provincias > li:nth-child(3n){
+    border-left-color:#000;
+}
